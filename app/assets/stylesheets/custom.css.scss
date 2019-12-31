@@ -28,6 +28,11 @@ $light: brown;
     text-align: center;
 }
 
+.message {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 .jumbotron {
     background-image: asset-url('cooking.jpg');
     background-size: cover;
@@ -45,6 +50,16 @@ $light: brown;
 .btn-lg {
     font-size: 1.7em;
     background-color: black;
+}
+
+.article-actions{
+    border-top: 1px solid #eaeaea;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.description {
+    margin-top: 1rem;
 }
 
 footer {
@@ -70,4 +85,8 @@ footer ul {
 footer ul li {
     float: left;
     margin-left: 15px
+}
+
+.card{
+    margin-bottom: 10px;
 }
