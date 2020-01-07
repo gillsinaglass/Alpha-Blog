@@ -3,34 +3,6 @@
         <%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
     </div>
     
-     <% @articles.each do |article|%>
-    <div class="row">
-        <div class="col-sm-8 offset-sm-2">
-            <div class="card">
-                <div class="article-title">
-                    <%= link_to article.title, article_path(article)%>
-                </div>
-                <div class="article-body">
-                    <%= truncate(article.description, length: 100)%>
-                    <div class="article-meta-details">
-                        <small>Created by: <%= article.user.username%>,
-                        <%= time_ago_in_words(article.created_at)%> ago,
-                        last updated: <%= time_ago_in_words(article.updated_at)%></small>
-                    </div>
-                </div>
-                <%if logged_in? && current_user == article.user%>
-                    <div class="article-actions">
-                        <%= link_to 'Edit this article', edit_article_path(article), class: "btn btn-sm btn-primary"%>
-                            <%= link_to "Delete this article", article_path(article), method: :delete, 
-                                                                data: {confirm: "Are you sure you want to delete?"}, 
-                                                                class: "btn btn-sm btn-danger"%>
-                    </div>
-                <% end%>
-            </div>
-        </div> 
-    </div> 
-<%end%>
-
      <div align="center">
         <%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
     </div>
