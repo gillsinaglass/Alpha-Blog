@@ -3,6 +3,8 @@
         <%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
     </div>
     
+     <%= render 'article', obj: @articles %>
+
      <div align="center">
         <%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
     </div>
